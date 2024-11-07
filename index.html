@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores da Terra - Refeições Saudáveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Sabores da Terra">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#planos">Planos Nutricionais</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <h1>Alimentação saudável, na medida certa para você!</h1>
+        <button onclick="window.location.href='#cardapio'">Monte Sua Refeição Agora!</button>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona">
+        <h2>Como Funciona</h2>
+        <div class="funcionalidades">
+            <div class="funcao">
+                <h3>Montagem Interativa</h3>
+                <p>Escolha entre diferentes opções de carboidratos, proteínas, vegetais e muito mais!</p>
+            </div>
+            <div class="funcao">
+                <h3>Filtros de Dieta</h3>
+                <p>Seja Low Carb, Vegetariana ou Sem Glúten, temos opções para todos!</p>
+            </div>
+            <div class="funcao">
+                <h3>Freshness Guarantee</h3>
+                <p>Refeições frescas preparadas no mesmo dia para você!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio -->
+    <section id="cardapio">
+        <h2>Nosso Cardápio</h2>
+        <div class="menu">
+            <!-- Item de exemplo -->
+            <div class="item-cardapio">
+                <h3>Prato Low Carb</h3>
+                <p>Arroz de couve-flor, peito de frango grelhado e brócolis no vapor.</p>
+                <button onclick="adicionarAoCarrinho('Prato Low Carb')">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Mais itens podem ser listados aqui -->
+        </div>
+    </section>
+
+    <!-- Planos Nutricionais -->
+    <section id="planos">
+        <h2>Planos Nutricionais</h2>
+        <p>Receba planos personalizados com a ajuda de nossos nutricionistas.</p>
+        <button onclick="window.location.href='/consultoria-nutricional'">Fale com um Nutricionista</button>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form id="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Sabores da Terra - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
