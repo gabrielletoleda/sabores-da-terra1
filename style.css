@@ -1,0 +1,169 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.banner h1 {
+    font-size: 36px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Como Funciona */
+#como-funciona {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.funcionalidades {
+    display: flex;
+    justify-content: space-around;
+}
+
+.funcao {
+    width: 30%;
+    padding: 10px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+}
+
+.funcao h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Cardápio */
+#cardapio {
+    padding: 40px 20px;
+    background-color: #f0f0f0;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item-cardapio {
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.item-cardapio button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Formulário de Contato */
+#contato {
+    padding: 40px 20px;
+}
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-contato input,
+#form-contato textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#form-contato button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+3. Funções JavaScript (app.js)
+javascript
+Copiar código
+// Função para adicionar itens ao carrinho
+function adicionarAoCarrinho(item) {
+    alert(`${item} foi adicionado ao seu carrinho!`);
+}
+
+// Envio do formulário de contato
+document.getElementById('form-contato').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    alert(`Mensagem enviada! Obrigado, ${nome}.`);
+
+    // Limpar formulário
+    document.getElementById('form-contato').reset();
+});
